@@ -10,11 +10,11 @@
         "suppressImplicitAnyIndexErrors":  true,
         "outDir": "dist/"
     },
-    
+
     "filesGlob": [
         "src/**/*{ts,tsx}"
     ],
-    
+
     "exclude": [
         "dist",
         "node_modules"
