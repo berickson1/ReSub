@@ -28,8 +28,8 @@ export interface AutoSubscription {
 export abstract class StoreBase {
     static Key_All = '%!$all';
 
-    private _subscriptions: _.Dictionary<SubscriptionCallbackFunction[]> = {};
-    private _autoSubscriptions: _.Dictionary<AutoSubscription[]> = {};
+    private _subscriptions: {[key: string]: SubscriptionCallbackFunction[]} = {};
+    private _autoSubscriptions: {[key: string]: AutoSubscription[]} = {};
 
     private _subTokenNum = 1;
     private _subsByNum: { [token: number]: { key: string, callback: SubscriptionCallbackFunction } } = {};
@@ -185,7 +185,7 @@ export abstract class StoreBase {
 
         storedCallbacks.forEach((keys, callback) => {
             // Do a quick dedupe on keys
-            const uniquedKeys = keys ? _.unique(keys) : keys;
+            const uniquedKeys = keys ? _.uniq(keys) : keys;
             callback(uniquedKeys);
         });
     };

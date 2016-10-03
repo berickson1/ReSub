@@ -9,13 +9,20 @@
     "build": "tsc"
   },
   "dependencies": {
-    "assert": "^1.4.1",
-    "lodash": "^3.10.1",
-    "react": "^15.0.0",
-    "ts-loader": "^0.8.2",
-    "typescript": "^2.0.0"
+    "@types/assert": "0.0.29",
+    "@types/lodash": "^4.14.36",
+    "@types/react": "^0.14.37",
+    "assert": "^1.4.1"
+  },
+  "peerDependencies": {
+    "typescript": "^2.0.0",
+    "lodash": "3.x || 4.x",
+    "react": "^15.0.0"
   },
   "devDependencies": {
+    "@types/react": "^0.14.37",
+    "@types/react-addons-test-utils": "^0.14.15",
+    "react": "^15.0.0",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "^15.0.0",
     "ts-loader": "^0.8.2",
@@ -36,5 +43,5 @@
     "stores"
   ],
   "license": "MIT",
-	"types": "dist/src/ReSub.d.ts"
+  "types": "dist/src/ReSub.d.ts"
 }
