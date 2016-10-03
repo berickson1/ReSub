@@ -18,8 +18,8 @@ export interface IOptions {
 };
 
 let OptionsVals: IOptions = {
-    setTimeout: setTimeout,
-    clearTimeout: clearTimeout,
+    setTimeout: setTimeout.bind(null),
+    clearTimeout: clearTimeout.bind(null),
 
     development: true
 };
